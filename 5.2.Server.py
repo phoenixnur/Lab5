@@ -17,7 +17,7 @@ print("waiting for a connection.")
 ServerSocket.listen(5)
 
 def threaded_client(connection):
-	connection.send(str.encode('welcome to the server\n'))
+	connection.send(str.encode('welcome to the server'))
 	while True:
 		data = connection.recv(2048)
 		reply = 'server says: ' + data.decode('utf-8')
